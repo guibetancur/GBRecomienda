@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Categoría:</strong>
+  <%= @recommendation.category %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @recommendation.url %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @recommendation.name %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @recommendation.description %>
+</p>
+
+<p>
+  <strong>Llamadas:</strong>
+  <%= @recommendation.calls %>
+</p>
+
+<p>
+  <strong>Puntaje:</strong>
+  <%= @recommendation.score %>
+</p>
+
+<%= link_to 'Editar', edit_recommendation_path(@recommendation) %> |
+<%= link_to 'Regresar', recommendations_path %>

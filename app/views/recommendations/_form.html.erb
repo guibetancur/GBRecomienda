@@ -1,0 +1,47 @@
+<%= form_with(model: recommendation, local: true) do |form| %>
+  <% if recommendation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recommendation.errors.count, "error") %> prohibieron grabar esta recomendación:</h2>
+
+      <ul>
+      <% recommendation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Categoría %>
+    <%= form.text_field :category, id: :recommendation_category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :URL %>
+    <%= form.text_field :url, id: :recommendation_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nombre %>
+    <%= form.text_field :name, id: :recommendation_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Descripción %>
+    <%= form.text_field :description, id: :recommendation_description %>
+  </div>
+
+  <!-- <div class="field">
+    <%#= form.label :calls %>
+    <%#= form.text_field :calls, id: :recommendation_calls %>
+  </div>
+
+  <div class="field">
+    <%#= form.label :score %>
+    <%#= form.text_field :score, id: :recommendation_score %>
+  </div> -->
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
