@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  category: MyString
   url: MyString
   name: MyString
   description: MyString
-  calls: MyString
-  score: MyString
+  calls: 
+  score: 
 
 two:
+  category: MyString
   url: MyString
   name: MyString
   description: MyString
-  calls: MyString
-  score: MyString
+  calls: 
+  score: 

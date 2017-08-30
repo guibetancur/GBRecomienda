@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :Descripción %>
-    <%= form.text_field :description, id: :recommendation_description %>
+    <%= form.text_area :description, id: :recommendation_description %>
   </div>
 
   <!-- <div class="field">
@@ -42,6 +42,7 @@
   </div> -->
 
   <div class="actions">
-    <%= form.submit %>
+<%#= f.submit "Guardar", class:"btn be-red white" %>
+    <%= form.submit "Guardar" %>
   </div>
 <% end %>

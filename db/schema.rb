@@ -10,17 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170823040111) do
+ActiveRecord::Schema.define(version: 20170825140653) do
+
+  create_table "categories", primary_key: "category_id", force: :cascade do |t|
+    t.text "category", null: false
+    t.index ["category"], name: "sqlite_autoindex_categories_1", unique: true
+  end
 
   create_table "recommendations", force: :cascade do |t|
+    t.string "category"
     t.string "url"
     t.string "name"
     t.string "description"
-    t.string "calls"
-    t.string "score"
+    t.decimal "calls"
+    t.decimal "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "category"
   end
 
 end
